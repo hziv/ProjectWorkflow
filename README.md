@@ -35,7 +35,8 @@ Packages that are not available through Anaconda, can be installed using `pip`. 
     $ pip install dtaidistance 
 
 ### Step 4: 
-Export conda environment into `environment.yml` file.
+Export conda environment into `environment.yml` file. 
+Note the pipe operator `>`!
 
     $ conda env export --prefix C:\Users\UserName\..\MyProject\myenv > environment.yml
     
