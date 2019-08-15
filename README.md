@@ -36,9 +36,10 @@ Packages that are not available through Anaconda, can be installed using `pip`. 
 
 ### Step 4: 
 Export conda environment into `environment.yml` file. 
-Note the pipe operator `>`!
 
-    $ conda env export --prefix C:\Users\UserName\..\MyProject\myenv > environment.yml
+First, activate the environment to be exported and also, navigate to `.\MyProject\myenv` folder. Be carefull here, note the pipe operator `>`!
+    
+    $ '(myenv)'C:\Users\UserName\..\MyProject\myenv>conda env export --prefix C:\Users\UserName\..\MyProject\myenv > environment.yml
     
 This will create file `environment.yml` inside `..\MyProject\myenv` folder.
 
@@ -65,3 +66,4 @@ Fire up Jupyter Notebook inside your conda environment:
 [Conda documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/index.html) 
 
 [Installing Python Packages from Jupyter](https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/)
+[conda env export fails](https://github.com/conda/conda/issues/1935)
