@@ -41,7 +41,7 @@ Export conda environment into `environment.yml` file.
     
 This will create file `environment.yml` inside `..\MyProject\myenv` folder.
 
-### Step 5.
+### Step 5:
 Please project folder and `environment.yml` file under version control.
 
      $ git init
@@ -49,5 +49,18 @@ Please project folder and `environment.yml` file under version control.
      $ git commit C:\Users\UserName\..\MyProject\myenv\environment.yml -m "conda environment"
      $ git create 
      $ git push -u origin master
+     
+### Step 6: 
+*(optional)*
+Fire up Jupyter Notebook inside your conda environment:
+    
+    $ jupyter notebook
+    
+ create a notebook, add to `git`, commit and push. 
 
     
+### Useful links
+
+[Conda documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/index.html) 
+
+[Installing Python Packages from Jupyter](https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/)
