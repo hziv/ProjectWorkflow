@@ -49,7 +49,10 @@ Please project folder and `environment.yml` file under version control.
      $ git init
      $ git add C:\Users\UserName\..\MyProject\myenv\environment.yml
      $ git commit C:\Users\UserName\..\MyProject\myenv\environment.yml -m "conda environment"
-     $ git create 
+    
+Now create a new repo on `github`. To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to GitHub.
+
+     $ git remote add origin https://github.com/username/MyProject.git
      $ git push -u origin master
      
 ### Step 6: 
