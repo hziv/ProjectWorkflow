@@ -66,4 +66,5 @@ Fire up Jupyter Notebook inside your conda environment:
 [Conda documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/index.html) 
 
 [Installing Python Packages from Jupyter](https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/)
+
 [conda env export fails](https://github.com/conda/conda/issues/1935)
