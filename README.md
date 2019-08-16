@@ -31,6 +31,8 @@ Check that packages have been installed (view list of all packages installed in 
 Packages that are not available through Anaconda, can be installed using `pip`. Activate the environment and run:
 
     $ pip install dtaidistance 
+    
+If you want to use modules (functions) inside user created `*.py` scripts, the scripts must be saved in `C:\Users\UserName\...\MyProject\myenv\Lib\site-packages` folder.
 
 ### Step 3: Export conda environment
 
