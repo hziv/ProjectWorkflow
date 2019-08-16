@@ -8,7 +8,7 @@ In the folder where you installed Anaconda (Example: `C:\Users\username\Anaconda
 Install Miniconda. 
 
 ### Step 2:
-Create a project folder on your computer.
+Create a project folder `MyProject` on your computer.
 
 ### Step 3: 
 *Note: Use Anaconda Prompt instead of Windows terminal.*
