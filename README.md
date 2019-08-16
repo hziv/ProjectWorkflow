@@ -1,19 +1,19 @@
-### Project Workflow (on Windows)
+# Project Workflow (on Windows)
 
-Step 0. Uninstall Anaconda. 
+### Step -1. Uninstall Anaconda. 
 
 In the folder where you installed Anaconda (Example: `C:\Users\username\Anaconda3`) there should be an executable called `Uninstall-Anaconda.exe`. Double click on this file to start uninstall Anaconda.
 
-### Step 1:
-Install Miniconda. 
+### Step 0: Install Miniconda. 
 
-### Step 2:
-Create a project folder `MyProject` on your computer.
+### Step 1: Create a project folder.
 
-### Step 3: 
+On your computer, create folder `MyProject`.
+
+### Step 2: Create conda environment
 *Note: Use Anaconda Prompt instead of Windows terminal.*
 
-Create a `conda` environment `myenv` that lives inside the project folder.
+Create `conda` environment `myenv` that lives inside the project folder.
     
     $ conda create --prefix C:\Users\UserName\...\MyProject\myenv
     
@@ -34,7 +34,8 @@ Packages that are not available through Anaconda, can be installed using `pip`. 
 
     $ pip install dtaidistance 
 
-### Step 4: 
+### Step 3: Export conda environment
+
 Export conda environment into `environment.yml` file. Activate the environment and run (note the pipe operator `>`!):
 
     $ conda env export > environment.yml
@@ -49,8 +50,9 @@ Unfortunately, when your environment lives inside your project folder (as oppose
     
 This should create file `environment.yml` inside `..\MyProject\myenv` folder. If you run into problems, see links at the bottom.
 
-### Step 5:
-Version control. Navigate to your project folder and run:
+### Step 4: Version control
+
+Navigate to your project folder and run:
 
      $ git init
      $ git add C:\Users\UserName\..\MyProject\myenv\environment.yml
@@ -61,7 +63,7 @@ Now create a new repo on `github`. To avoid errors, do not initialize the new re
      $ git remote add origin https://github.com/username/MyProject.git
      $ git push -u origin master
      
-### Step 6: 
+### Step 5: Jupyter 
 *(optional)*
 Fire up Jupyter Notebook inside your conda environment:
     
