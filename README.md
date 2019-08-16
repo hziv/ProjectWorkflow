@@ -17,7 +17,7 @@ Create a `conda` environment `myenv` that lives inside the project folder.
     
     $ conda create --prefix C:\Users\UserName\...\MyProject\myenv
     
-Check that the new environment has been created:
+Check that the new environment has been created (view list of all your environments):
 
     $ conda info --envs
 
@@ -26,7 +26,7 @@ Activate the environment and install all the necessary dependencies:
     $ conda activate C:\Users\UserName\...\MyProject\myenv 
     $ conda install python=3.7.3 jupyter numpy pandas scipy matplotlib
     
-Check that packages have been installed:
+Check that packages have been installed (view list of all packages installed in your environment):
 
     $ conda list
     
@@ -35,16 +35,22 @@ Packages that are not available through Anaconda, can be installed using `pip`. 
     $ pip install dtaidistance 
 
 ### Step 4: 
-Export conda environment into `environment.yml` file. 
+Export conda environment into `environment.yml` file. Activate the environment and run (note the pipe operator `>`!):
 
-First, activate the environment to be exported and also, navigate to `.\MyProject\myenv` folder. Be carefull here, note the pipe operator `>`!
+    $ conda env export > environment.yml
+    
+`environment.yml` file should be version controlled. It can be shared, i.e. someone else can create the exact same environment from your `environment.yml` file.
+    
+    conda env create -f environment.yml
+    
+Unfortunately, when your environment lives inside your project folder (as opposed to the default folder `\miniconda\envs\`), exporting it can be buggy.  Before exporting, make sure the environment is activated. Also, navigate to its folder `.\MyProject\myenv`. 
     
     $ '(myenv)'C:\Users\UserName\..\MyProject\myenv>conda env export --prefix C:\Users\UserName\..\MyProject\myenv > environment.yml
     
-This will create file `environment.yml` inside `..\MyProject\myenv` folder.
+This should create file `environment.yml` inside `..\MyProject\myenv` folder. If you run into problems, see links at the bottom.
 
 ### Step 5:
-Please project folder and `environment.yml` file under version control.
+Version control. Navigate to your project folder and run:
 
      $ git init
      $ git add C:\Users\UserName\..\MyProject\myenv\environment.yml
