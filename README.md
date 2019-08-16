@@ -1,10 +1,8 @@
 # Project Workflow (on Windows)
 
-### Step -1. Uninstall Anaconda. 
+### Step 0. Uninstall Anaconda and install Miniconda.
 
 In the folder where you installed Anaconda (Example: `C:\Users\username\Anaconda3`) there should be an executable called `Uninstall-Anaconda.exe`. Double click on this file to start uninstall Anaconda.
-
-### Step 0: Install Miniconda. 
 
 ### Step 1: Create a project folder.
 
