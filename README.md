@@ -70,6 +70,13 @@ Fire up Jupyter Notebook inside your conda environment:
     $ jupyter notebook
     
  create a notebook, add to `git`, commit and push. 
+ 
+ Note that Jupyter Shell environment is determined by what is your working directory when you run `jupyter notebook` command. For more info, see below links. 
+ 
+ The Python executable being used in the notebook can be determined by running in the notebook cell
+ 
+    $ import sys
+    $ sys.executable
 
     
 ### Useful links
