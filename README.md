@@ -77,8 +77,24 @@ Fire up Jupyter Notebook inside your conda environment:
  
     $ import sys
     $ sys.executable
-
     
+### Step 6: Remove environment
+
+If your environment lives inside the project folder, you have to give its full path after the `--prefix` parameter (`--name` parameter will not work):
+
+    $ C:\Users\idomaingue>conda env remove --prefix .\PythonJupyterNotebooks\DTW\dtw_env
+    $ 
+    $ Remove all packages in environment C:\Users\idomaingue\PythonJupyterNotebooks\DTW\dtw_env: 
+
+Now check that it has been removed:
+
+    $ C:\Users\idomaingue>conda info --envs
+    $ # conda environments:
+    $ #
+    $ base                  *  C:\Users\idomaingue\Documents\miniconda3
+
+The `dtw_env` folder will still be there, full of `conda-trash` files. You can manually delete it.
+
 ### Useful links
 
 [Conda documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/index.html) 
