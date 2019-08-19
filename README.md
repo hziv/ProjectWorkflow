@@ -38,7 +38,7 @@ Note that for `dtaidistance` to work properly (i.e. using fast C implementation)
     
 Also, finding OpenMP might be a problem when installing `dtaidistance` on Windows, so option with no OpenMP might work best:
 
-    $ pip install --global-option=--noopenmp dtaidistanc
+    $ pip install --global-option=--noopenmp dtaidistance
 
 To use *custom* `*.py` *scripts*, the scripts must be saved in `C:\Users\UserName\...\MyProject\myenv\Lib\site-packages` folder.
 
