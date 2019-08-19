@@ -31,8 +31,16 @@ Check that packages have been installed (view list of all packages installed in 
 Packages that are not available through Anaconda, can be installed using `pip`. Activate the environment and run:
 
     $ pip install dtaidistance 
+
+Note that for `dtaidistance` to work properly (i.e. using fast C implementation), it is best to install `cython` first, so 
+
+    $ pip install cython
     
-If you want to use modules (functions) inside user created `*.py` scripts, the scripts must be saved in `C:\Users\UserName\...\MyProject\myenv\Lib\site-packages` folder.
+Also, finding OpenMP might be a problem when installing `dtaidistance` on Windows, so option with no OpenMP might work best:
+
+    $ pip install --global-option=--noopenmp dtaidistanc
+
+To use *custom* `*.py` *scripts*, the scripts must be saved in `C:\Users\UserName\...\MyProject\myenv\Lib\site-packages` folder.
 
 ### Step 3: Export conda environment
 
