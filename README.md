@@ -11,34 +11,38 @@ On your computer, create folder `MyProject`.
 ### Step 2: Create conda environment
 *Note: Use Anaconda Prompt instead of Windows terminal.*
 
-Create `conda` environment `myenv` that lives inside the project folder.
+Create **empty** `conda` environment `myenv` that lives inside the project folder.
     
-    $ conda create --prefix C:\Users\UserName\...\MyProject\myenv
+    conda create --prefix C:\Users\UserName\...\MyProject\myenv
     
 Check that the new environment has been created (view list of all your environments):
 
-    $ conda info --envs
+    conda info --envs
 
-Activate the environment and install all the necessary dependencies:
+Activate the environment and install all the necessary dependencies, incl. *python executable*:
 
-    $ conda activate C:\Users\UserName\...\MyProject\myenv 
-    $ conda install python=3.7.3 jupyter numpy pandas scipy matplotlib
+    conda activate C:\Users\UserName\...\MyProject\myenv 
+    conda install python=3.7.3 jupyter numpy pandas scipy matplotlib
     
 Check that packages have been installed (view list of all packages installed in your environment):
 
-    $ conda list
+    conda list
     
+*Note:* When you clone someone else's repo from GitHub, you will create an environment from their `environment.yml` file:
+
+    conda create --prefix C:\Users\UserName\...\MyProject\myenv --file C:\Users\UserName\..\..\environment.yml 
+
 Packages that are not available through Anaconda, can be installed using `pip`. Activate the environment and run:
 
-    $ pip install dtaidistance 
+    pip install dtaidistance 
 
 Note that for `dtaidistance` to work properly (i.e. using fast C implementation), it is best to install `cython` first, so 
 
-    $ pip install cython
+    pip install cython
     
 Also, finding OpenMP might be a problem when installing `dtaidistance` on Windows, so option with no OpenMP might work best:
 
-    $ pip install --global-option=--noopenmp dtaidistance
+    pip install --global-option=--noopenmp dtaidistance
 
 To use *custom* `*.py` *scripts*, the scripts must be saved in `C:\Users\UserName\...\MyProject\myenv\Lib\site-packages` folder.
 
@@ -46,7 +50,7 @@ To use *custom* `*.py` *scripts*, the scripts must be saved in `C:\Users\UserNam
 
 Export conda environment into `environment.yml` file. Activate the environment and run (note the pipe operator `>`!):
 
-    $ conda env export > environment.yml
+    conda env export > environment.yml
     
 `environment.yml` file should be version controlled. It can be shared, i.e. someone else can create the exact same environment from your `environment.yml` file.
     
@@ -54,7 +58,7 @@ Export conda environment into `environment.yml` file. Activate the environment a
     
 Unfortunately, when your environment lives inside your project folder (as opposed to the default folder `\miniconda\envs\`), exporting it can be buggy.  Before exporting, make sure the environment is activated. Also, navigate to its folder `.\MyProject\myenv`. 
     
-    $ '(myenv)'C:\Users\UserName\..\MyProject\myenv>conda env export --prefix C:\Users\UserName\..\MyProject\myenv > environment.yml
+    '(myenv)'C:\Users\UserName\..\MyProject\myenv>conda env export --prefix C:\Users\UserName\..\MyProject\myenv > environment.yml
     
 This should create file `environment.yml` inside `..\MyProject\myenv` folder. If you run into problems, see links at the bottom.
 
@@ -62,20 +66,20 @@ This should create file `environment.yml` inside `..\MyProject\myenv` folder. If
 
 Navigate to your project folder and run:
 
-     $ git init
-     $ git add C:\Users\UserName\..\MyProject\myenv\environment.yml
-     $ git commit C:\Users\UserName\..\MyProject\myenv\environment.yml -m "conda environment"
+     git init
+     git add C:\Users\UserName\..\MyProject\myenv\environment.yml
+     git commit C:\Users\UserName\..\MyProject\myenv\environment.yml -m "conda environment"
     
 Now create a new repo on `github`. To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to GitHub.
 
-     $ git remote add origin https://github.com/username/MyProject.git
-     $ git push -u origin master
+     git remote add origin https://github.com/username/MyProject.git
+     git push -u origin master
      
 ### Step 5: Jupyter 
 *(optional)*
 Fire up Jupyter Notebook inside your conda environment:
     
-    $ jupyter notebook
+    jupyter notebook
     
  create a notebook, add to `git`, commit and push. 
  
@@ -83,23 +87,23 @@ Fire up Jupyter Notebook inside your conda environment:
  
  The Python executable being used in the notebook can be determined by running in the notebook cell
  
-    $ import sys
-    $ sys.executable
+    import sys
+    sys.executable
     
 ### Step 6: Remove environment
 
 If your environment lives inside the project folder, you have to give its full path after the `--prefix` parameter (`--name` parameter will not work):
 
-    $ C:\Users\idomaingue>conda env remove --prefix .\PythonJupyterNotebooks\DTW\dtw_env
-    $ 
-    $ Remove all packages in environment C:\Users\idomaingue\PythonJupyterNotebooks\DTW\dtw_env: 
+    C:\Users\idomaingue>conda env remove --prefix .\PythonJupyterNotebooks\DTW\dtw_env
+     
+    Remove all packages in environment C:\Users\idomaingue\PythonJupyterNotebooks\DTW\dtw_env: 
 
 Now check that it has been removed:
 
-    $ C:\Users\idomaingue>conda info --envs
-    $ # conda environments:
-    $ #
-    $ base                  *  C:\Users\idomaingue\Documents\miniconda3
+    C:\Users\idomaingue>conda info --envs
+    # conda environments:
+    #
+    base                  *  C:\Users\idomaingue\Documents\miniconda3
 
 The `dtw_env` folder will still be there, full of `conda-trash` files. You can manually delete it.
 
