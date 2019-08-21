@@ -46,7 +46,7 @@ Also, finding OpenMP might be a problem when installing `dtaidistance` on Window
 
 To use *custom* `*.py` *scripts*, the scripts must be saved in `C:\Users\UserName\...\MyProject\myenv\Lib\site-packages` folder.
 
-### Step 3: Export conda environment
+### Step 3: conda `environment.yml` file
 
 It would be useful to produce a file listing all the packages and their versions installed inside an environment. This file can be version controlled and shared on GitHub. The convention is to create `environment.yml` file. 
 
