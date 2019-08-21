@@ -48,7 +48,7 @@ To use *custom* `*.py` *scripts*, the scripts must be saved in `C:\Users\UserNam
 
 ### Step 3: Export conda environment
 
-Export conda environment into `environment.yml` file. Activate the environment and run (note the pipe operator `>`!):
+Export conda environment into `environment.yml` file. Activate the environment, navigate to the environment folder and run (note the pipe operator `>`!):
 
     conda env export > environment.yml
     
@@ -56,7 +56,7 @@ Export conda environment into `environment.yml` file. Activate the environment a
     
     conda env create -f environment.yml
     
-Unfortunately, when your environment lives inside your project folder (as opposed to the default folder `\miniconda\envs\`), exporting it can be buggy.  Before exporting, make sure the environment is activated. Also, navigate to its folder `.\MyProject\myenv`. 
+Unfortunately, when your environment lives inside your project folder (as opposed to the default folder `\miniconda\envs\`), exporting it can be buggy.  It is important to activate it, navigate to its folder `.\MyProject\myenv` and use the `--prefix` option:
     
     '(myenv)'C:\Users\UserName\..\MyProject\myenv>conda env export --prefix C:\Users\UserName\..\MyProject\myenv > environment.yml
     
