@@ -34,7 +34,7 @@ Check that packages have been installed (view list of all packages installed in 
 
 Packages that are not available through Anaconda, can be installed using `pip`. Activate the environment and run:
 
-    pip install glob2
+    pip install glob2 regex
     pip install dtaidistance 
 
 Note that for `dtaidistance` to work properly (i.e. using fast C implementation), it is best to install `cython` first, so 
