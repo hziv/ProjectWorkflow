@@ -19,11 +19,18 @@ Check that the new environment has been created (view list of all your environme
 
     conda info --envs
 
+### Step 3: Install dependencies (python.exe, python packages, jupyter etc)
+
 Activate the environment and install all the necessary dependencies, incl. *python executable*:
 
     conda activate C:\Users\UserName\...\MyProject\myenv 
     conda install python=3.7.3 jupyter numpy pandas scipy matplotlib
     
+It is also nice to have jupyter extensions available straight away:
+
+    conda install -c conda-forge jupyter_contrib_nbextensions
+    conda install -c conda-forge jupyter_nbextensions_configurator
+
 Check that packages have been installed (view list of all packages installed in your environment):
 
     conda list
@@ -47,7 +54,7 @@ Also, finding OpenMP might be a problem when installing `dtaidistance` on Window
 
 To use *custom* `*.py` *scripts*, the scripts must be saved in `C:\Users\UserName\...\MyProject\myenv\Lib\site-packages` folder.
 
-### Step 3: conda `environment.yml` file
+### Step 4: conda `environment.yml` file
 
 It would be useful to produce a file listing all the packages and their versions installed inside an environment. This file can be version controlled and shared on GitHub. The convention is to create `environment.yml` file. 
 
@@ -65,7 +72,7 @@ Unfortunately, when your environment lives inside your project folder (as oppose
     
 This should create file `environment.yml` inside `..\MyProject\myenv` folder. If you run into problems, see links at the bottom.
 
-### Step 4: Version control
+### Step 5: Version control
 
 Navigate to your project folder and run:
 
@@ -78,7 +85,7 @@ Now create a new repo on `github`. To avoid errors, do not initialize the new re
      git remote add origin https://github.com/username/MyProject.git
      git push -u origin master
      
-### Step 5: Jupyter 
+### Step 6: start Jupyter and work happily ever after
 *(optional)*
 Fire up Jupyter Notebook inside your conda environment:
     
@@ -93,7 +100,7 @@ Fire up Jupyter Notebook inside your conda environment:
     import sys
     sys.executable
     
-### Step 6: Remove environment
+### Step 7: Remove environment
 
 If your environment lives inside the project folder, you have to give its full path after the `--prefix` parameter (`--name` parameter will not work):
 
