@@ -24,7 +24,7 @@ Check that the new environment has been created (view list of all your environme
 Activate the environment and install all the necessary dependencies, incl. *python executable*:
 
     conda activate C:\Users\UserName\...\MyProject\myenv 
-    conda install python=3.7.3 jupyter numpy pandas scipy matplotlib
+    conda install python=3.7.3 jupyter numpy pandas scipy matplotlib sqlalchemy pyodbc
     
 It is also nice to have jupyter extensions available straight away:
 
