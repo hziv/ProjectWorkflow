@@ -120,6 +120,8 @@ The `dtw_env` folder will still be there, full of `conda-trash` files. You can m
 
 ### Useful links
 
+[Jupyter Notebooks documentattion]https://jupyter-notebook.readthedocs.io/en/stable/
+
 [Conda documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/index.html) 
 
 [Installing Python Packages from Jupyter](https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/)
