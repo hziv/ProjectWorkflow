@@ -118,9 +118,15 @@ Now check that it has been removed:
 
 The `dtw_env` folder will still be there, full of `conda-trash` files. You can manually delete it.
 
-### Useful links
+### Tutorials and books
 
-[Jupyter Notebooks documentattion]https://jupyter-notebook.readthedocs.io/en/stable/
+[Automate the Boring Stuff with Python: Chapter 13 Working with Excel](https://automatetheboringstuff.com/2e/chapter13/)
+
+[Python for Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
+
+### Documentation and useful links
+
+[Jupyter Notebooks documentattion](https://jupyter-notebook.readthedocs.io/en/stable/)
 
 [Conda documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/index.html) 
 
