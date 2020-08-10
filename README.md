@@ -24,7 +24,7 @@ Check that the new environment has been created (view list of all your environme
 Activate the environment and install all the necessary dependencies, incl. *python executable*:
 
     conda activate C:\Users\UserName\...\MyProject\myenv 
-    conda install python=3.8.5 jupyter numpy pandas scipy matplotlib sqlalchemy pyodbc statsmodels seaborn scikit-learn scorecardpy
+    conda install python=3.8.5 jupyter numpy pandas scipy matplotlib sqlalchemy pyodbc statsmodels seaborn scikit-learn
     
 Some libraries have to be installed via `conda-forge`:
 
@@ -42,7 +42,7 @@ Check that packages have been installed (view list of all packages installed in 
 
 Packages that are not available through Anaconda, can be installed using `pip`. Activate the environment and run:
 
-    pip install glob2 regex
+    pip install glob2 regex scorecardpy
     pip install dtaidistance 
 
 Note that for `dtaidistance` to work properly (i.e. using fast C implementation), it is best to install `cython` first, so 
