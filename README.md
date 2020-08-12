@@ -30,6 +30,7 @@ Some libraries have to be installed via `conda-forge`:
 
     conda install -c conda-forge jupyter_contrib_nbextensions
     conda install -c conda-forge tslearn
+    conda install -c conda-forge bayesian-optimization
 
 Check that packages have been installed (view list of all packages installed in your environment):
 
@@ -42,7 +43,8 @@ Check that packages have been installed (view list of all packages installed in 
 Packages that are not available through Anaconda, can be installed using `pip`. Activate the environment and run:
 
     pip install glob2 regex scorecardpy
-    pip install dtaidistance 
+    pip install dtaidistance
+    pip install xgboost
 
 Note that for `dtaidistance` to work properly (i.e. using fast C implementation), it is best to install `cython` first, so 
 
