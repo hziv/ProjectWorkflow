@@ -29,7 +29,6 @@ Activate the environment and install all the necessary dependencies, incl. *pyth
 Some libraries have to be installed via `conda-forge`:
 
     conda install -c conda-forge jupyter_contrib_nbextensions
-    conda install -c conda-forge jupyter_nbextensions_configurator
     conda install -c conda-forge tslearn
 
 Check that packages have been installed (view list of all packages installed in your environment):
