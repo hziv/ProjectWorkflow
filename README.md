@@ -31,6 +31,7 @@ Some libraries have to be installed via `conda-forge`:
     conda install -c conda-forge jupyter_contrib_nbextensions
     conda install -c conda-forge tslearn
     conda install -c conda-forge bayesian-optimization
+    conda install -c conda-forge imbalanced-learn
 
 Check that packages have been installed (view list of all packages installed in your environment):
 
